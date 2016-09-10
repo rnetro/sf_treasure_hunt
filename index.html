@@ -1,85 +1,36 @@
 <!DOCTYPE html>
 
-
-
-
-
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Waypoints in directions</title>
-      <link rel = "stylesheet" type = "text/css" href = "bootstrap.css">
-  </head>
-  <body>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>(the) City Hunt</title>
+  <link rel = "stylesheet" type = "text/css" href = "bootstrap.css">
+</head>
+<body>
 
-  <h1>Collapse (as seen in documenatation)</h1>
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible Group Item #1</a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse in">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
+<h1>(the) City Hunt</h1>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <b>Start:</b>
+      <select id="start">
+        <option value="San Francisco, CA">Current Location</option>
+      </select>
     </div>
   </div>
-
-
-
-  </div>
-
-  <div id="floating-panel">
-    <b>Mode of Travel: </b>
-    <select id="mode">
-      <option value="DRIVING">Driving</option>
-      <option value="WALKING">Walking</option>
-      <option value="BICYCLING">Bicycling</option>
-      <option value="TRANSIT">Transit</option>
-    </select>
-  </div>
-
-    <div id="map"></div>
-    <div id="right-panel">
-    <div>
-    <b>Start:</b>
-    <select id="start">
-      <option value="Halifax, NS">Halifax, NS</option>
-      <option value="Boston, MA">Boston, MA</option>
-      <option value="New York, NY">New York, NY</option>
-      <option value="Miami, FL">Miami, FL</option>
-    </select>
-    <br>
-    <b>Waypoints:</b> <br>
-    <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
+  <b>Mode of Travel: </b>
+  <select id="mode">
+    <option value="DRIVING">🚗</option>
+    <option value="WALKING">🚶🏽</option>
+    <option value="BICYCLING">🚴🏽</option>
+    <option value="TRANSIT">🚋</option>
+  </select>
+  <div>
+    <b>Waypoints:</b><br>
+    <i>select a few! </i>
     <select multiple id="waypoints">
       <option value="montreal, quebec">Montreal, QBC</option>
       <option value="toronto, ont">Toronto, ONT</option>
@@ -89,22 +40,25 @@
       <option value="calgary, ab">Calgary</option>
       <option value="spokane, wa">Spokane</option>
     </select>
-    <br>
-    <b>End:</b>
-    <select id="end">
-      <option value="Vancouver, BC">Vancouver, BC</option>
-      <option value="Seattle, WA">Seattle, WA</option>
-      <option value="San Francisco, CA">San Francisco, CA</option>
-      <option value="Los Angeles, CA">Los Angeles, CA</option>
-    </select>
-    <br>
-      <input type="submit" id="submit">
-    </div>
-    <div id="directions-panel"></div>
-    </div>
-    <script src="script.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXX-HZeWbVpnNiCuKj2Qgv8f85XGx0inQ&callback=initMap">
-    </script>
-  </body>
+  </div>
+  <b>End:</b>
+  <select id="end">
+    <option value="Vancouver, BC">Vancouver, BC</option>
+    <option value="Seattle, WA">Seattle, WA</option>
+    <option value="San Francisco, CA">San Francisco, CA</option>
+    <option value="Los Angeles, CA">Los Angeles, CA</option>
+  </select>
+
+  <br>
+  <input type="submit" id="submit">
+</div>
+
+<div id="map"></div>
+
+<div id="directions-panel"></div>
+</div>
+<script src="script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXX-HZeWbVpnNiCuKj2Qgv8f85XGx0inQ&callback=initMap">
+</script>
+</body>
 </html>
