@@ -7,3 +7,5 @@ Helpful links/ APIs ect:
 - [ ] https://developers.google.com/maps/documentation/javascript/examples/directions-simple
 - [ ] https://developers.google.com/places/javascript/
 - [ ] https://developers.google.com/maps/documentation/javascript/examples/directions-waypoints
+
+- [ ] our api key: AIzaSyBXX-HZeWbVpnNiCuKj2Qgv8f85XGx0inQ
