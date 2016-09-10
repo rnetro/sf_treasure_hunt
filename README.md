@@ -6,3 +6,4 @@ Helpful links/ APIs ect:
 - [ ] http://html5demos.com/geo
 - [ ] https://developers.google.com/maps/documentation/javascript/examples/directions-simple
 - [ ] https://developers.google.com/places/javascript/
+- [ ] https://developers.google.com/maps/documentation/javascript/examples/directions-waypoints
