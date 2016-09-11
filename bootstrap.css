@@ -29,7 +29,7 @@ html, body {
 #map {
   height: 100%;
   float: left;
-  width: 70%;
+  width: 100%;
   height: 100%;
 }
 #right-panel {
@@ -107,6 +107,7 @@ dfn {
 h1 {
   margin: .67em 0;
   font-size: 2em;
+  display: 
 }
 mark {
   color: #000;
@@ -3564,8 +3565,8 @@ tbody.collapse.in {
 }
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 0;
+  right: 0;
   z-index: 1000;
   display: none;
   float: left;
@@ -5862,6 +5863,7 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 .well {
+  display: inline;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;

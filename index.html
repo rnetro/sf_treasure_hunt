@@ -9,10 +9,12 @@
 </head>
 <body>
 
-<h1>(the) City Hunt</h1>
 
-
-<div class="well">
+<div class="dropdown open">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Options
+  </button>
   <div class="row">
     <div class="col-md-4">
       <b>Start:</b>
@@ -49,14 +51,16 @@
     <option value="Los Angeles, CA">Los Angeles, CA</option>
   </select>
 
-  <br>
+    <br>
 
-  <input type="submit" class="btn btn-default" id="submit">
+    <input type="submit" class="btn btn-default" id="submit">
+</div>
+</div>
+
 </div>
 
 <div id="map"></div>
 
-<div id="directions-panel"></div>
 </div>
 <script src="script.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXX-HZeWbVpnNiCuKj2Qgv8f85XGx0inQ&callback=initMap">
